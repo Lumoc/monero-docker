@@ -44,19 +44,16 @@ mkdir build
 cd build                                                                        
 cmake ..                                                                        
 make -j$(nproc)                                                                 
-#./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $email -t $numthre
-ads                                                                             
+#./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $email -t $numthreads
 if [ -z "$donate" ]                                                             
 then                                                                            
       echo "\$donate is empty"                                                  
       ./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t 
 $numthreads                                                                     
-      echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $nu
-mthreads                                                                        
+      echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads
 else                                                                            
       echo "\$donate is NOT empty"                                              
-      echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $nu
-mthreads --donate-level=$donate                                                 
+      echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate
       ./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t 
 $numthreads --donate-level=$donate                                              
 fi                                                                              
