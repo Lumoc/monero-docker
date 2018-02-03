@@ -4,7 +4,7 @@ Here is the actual launch command we are using:
 
 ./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate
 
-All four variables other than $username have default values. Username does not since that is your wallet address that you need to earn proceeds from mining.
+All  variables have default values.
 
 These four variables are passed to a Docker container as environment variables (“-e”). As a quick rundown in your docker run command you would have:
 
