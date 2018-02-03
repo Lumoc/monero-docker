@@ -54,7 +54,6 @@ $numthreads
 else                                                                            
       echo "\$donate is NOT empty"                                              
       echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate
-      ./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t 
-$numthreads --donate-level=$donate                                              
+      ./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate
 fi                                                                              
                           
